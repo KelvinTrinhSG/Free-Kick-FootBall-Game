@@ -146,8 +146,8 @@ public class Ball : MonoBehaviour
 
 		isShoot = false;
 		isPlay = false;
-		//rigidbody2D.Sleep ();
-		transform.localScale = new Vector3(maxScale, maxScale, maxScale);
+		GetComponent<Rigidbody2D>().Sleep ();
+        transform.localScale = new Vector3(maxScale, maxScale, maxScale);
 		transform.localEulerAngles = Vector3.zero;
 		transform.Rotate(0f, 0f, 0f);
 		oldPosition = Vector2.zero;
@@ -159,8 +159,7 @@ public class Ball : MonoBehaviour
 		GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
 		StartCoroutine("StopRigidbody");
-
-	}
+    }
 	public void stopShadow()
 	{
 		shadow.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
