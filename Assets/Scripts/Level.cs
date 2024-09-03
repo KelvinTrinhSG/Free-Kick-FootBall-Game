@@ -13,7 +13,6 @@ public class Level : MonoBehaviour
 	public float speed;
 	public Goalie goalie;
 	public GameObject GOALIER;
-
 	//
 	public BonusStar[] stars;
 	//
@@ -43,6 +42,7 @@ public class Level : MonoBehaviour
 	}
 	public void setLevel(int mLevel)
 	{
+		Debug.Log("setLevel");
 		defende.gameObject.SetActive(false);
 		goalie.gameObject.SetActive(false);
 		goalie.shadowGoalie.SetActive(false);

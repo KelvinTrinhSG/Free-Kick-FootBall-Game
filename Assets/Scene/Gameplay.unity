@@ -1370,6 +1370,7 @@ GameObject:
   - component: {fileID: 312691131}
   - component: {fileID: 312691130}
   - component: {fileID: 312691129}
+  - component: {fileID: 312691132}
   m_Layer: 0
   m_Name: star 2
   m_TagString: Untagged
@@ -1501,6 +1502,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &312691132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312691126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bf84dbb969dad458e95ee2b7e4b40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShow: 0
+  score: {fileID: 1720161698}
+  scoreImg: {fileID: 395244308}
+  isCollision: 0
+  startMove: {fileID: 1535275449}
+  soundMG: {fileID: 0}
 --- !u!1 &315387112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 376757296}
+  - component: {fileID: 376757297}
   m_Layer: 5
   m_Name: Button Manage 1
   m_TagString: Untagged
@@ -1760,6 +1780,33 @@ RectTransform:
   m_AnchoredPosition: {x: 258, y: -611}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &376757297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376757295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357163da75cb6af4c8a6a2d6586576a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  buttons:
+  - {fileID: 2124899101}
+  - {fileID: 525004276}
+  - {fileID: 1596737969}
+  points:
+  - {fileID: 1490155496}
+  - {fileID: 1221189432}
+  isShow: 1
+  speed: 5
+  shop: {fileID: 902652770}
+  ball: {fileID: 1132270672}
+  STATE: 0
+  quitGame: {fileID: 415352756}
+  ballMg: {fileID: 902652770}
 --- !u!1 &389582543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395244307}
   - component: {fileID: 395244306}
+  - component: {fileID: 395244308}
   m_Layer: 0
   m_Name: plus two
   m_TagString: Untagged
@@ -1920,6 +1968,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395244308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395244305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6703fde48932b84e87300c43c2eb82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointY: 0
+  speed: 5
+  point: {fileID: 373776375}
 --- !u!1 &410147994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2069,7 @@ GameObject:
   - component: {fileID: 415352753}
   - component: {fileID: 415352755}
   - component: {fileID: 415352754}
+  - component: {fileID: 415352756}
   m_Layer: 5
   m_Name: quit game
   m_TagString: Untagged
@@ -2072,6 +2136,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415352752}
   m_CullTransparentMesh: 1
+--- !u!114 &415352756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415352752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab477802a01829469e6ac1b471dc133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isQuit: 0
+  pointMove:
+  - {fileID: 1253706256}
+  - {fileID: 754832415}
+  speed: 40
 --- !u!1 &420957746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 501676761}
   - component: {fileID: 501676760}
+  - component: {fileID: 501676762}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -2664,6 +2746,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501676762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501676758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8efd4881560dc42b78b803e2709f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1132270678}
+  buttonMg1: {fileID: 376757297}
+  buttonMg2: {fileID: 1736624283}
+  score: {fileID: 1720161698}
 --- !u!1 &519631161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3534,7 @@ GameObject:
   - component: {fileID: 691615673}
   - component: {fileID: 691615675}
   - component: {fileID: 691615677}
+  - component: {fileID: 691615678}
   m_Layer: 0
   m_Name: star Score
   m_TagString: Untagged
@@ -3572,6 +3671,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &691615678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691615672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0414d6da8c60b48b4f57477cd890bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreStar: 0
+  textStar: {fileID: 1319973852}
+  textScoreStar: {fileID: 286095535}
 --- !u!1 &711519484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4161,7 @@ GameObject:
   - component: {fileID: 830425264}
   - component: {fileID: 830425263}
   - component: {fileID: 830425262}
+  - component: {fileID: 830425266}
   m_Layer: 0
   m_Name: star 3
   m_TagString: Untagged
@@ -4178,6 +4293,24 @@ Transform:
   - {fileID: 632395040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &830425266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830425260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bf84dbb969dad458e95ee2b7e4b40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShow: 0
+  score: {fileID: 1720161698}
+  scoreImg: {fileID: 395244308}
+  isCollision: 0
+  startMove: {fileID: 1535275449}
+  soundMG: {fileID: 0}
 --- !u!1 &848026255
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4323,7 @@ GameObject:
   - component: {fileID: 848026258}
   - component: {fileID: 848026257}
   - component: {fileID: 848026260}
+  - component: {fileID: 848026261}
   m_Layer: 5
   m_Name: Ball2
   m_TagString: Untagged
@@ -4272,8 +4406,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -4284,6 +4418,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &848026261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848026255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863790781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863790782}
   - component: {fileID: 863790783}
+  - component: {fileID: 863790784}
   m_Layer: 0
   m_Name: plus One
   m_TagString: Untagged
@@ -4368,6 +4515,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &863790784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863790781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6703fde48932b84e87300c43c2eb82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointY: 689
+  speed: 5
+  point: {fileID: 373776375}
 --- !u!1 &896769618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,6 +4542,7 @@ GameObject:
   - component: {fileID: 896769621}
   - component: {fileID: 896769620}
   - component: {fileID: 896769623}
+  - component: {fileID: 896769624}
   m_Layer: 5
   m_Name: Ball3
   m_TagString: Untagged
@@ -4462,8 +4625,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -4474,6 +4637,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &896769624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896769618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897092225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,6 +4727,7 @@ GameObject:
   - component: {fileID: 902652767}
   - component: {fileID: 902652769}
   - component: {fileID: 902652768}
+  - component: {fileID: 902652770}
   m_Layer: 5
   m_Name: Ball Manage
   m_TagString: Untagged
@@ -4631,6 +4807,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902652766}
   m_CullTransparentMesh: 1
+--- !u!114 &902652770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902652766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2776fb336f5f454eaa95ca484a73cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeBalls:
+  - {fileID: 1729298805}
+  - {fileID: 1814648103}
+  - {fileID: 848026261}
+  - {fileID: 896769624}
+  - {fileID: 1612597912}
+  - {fileID: 1980235441}
+  - {fileID: 1315557973}
+  - {fileID: 1234502264}
+  - {fileID: 1158376361}
+  - {fileID: 1144441952}
+  - {fileID: 2129774834}
+  costBall: 00000000140000001e0000001e000000320000001e0000001e000000140000001e0000000f00000032000000
+  score: {fileID: 1720161698}
+  starManage: {fileID: 691615678}
+  imgLock:
+  - {fileID: 21300000, guid: 358c699461f8e8543b42f6e27f5111cb, type: 3}
+  - {fileID: 21300000, guid: f2514389f0e2e104083428ac2d661d0b, type: 3}
+  - {fileID: 21300000, guid: 41ec4f66c2560f44084f61093031c837, type: 3}
+  - {fileID: 21300000, guid: b688a3554f1d82540879884432aa0b49, type: 3}
+  - {fileID: 21300000, guid: ff785cd38c7b10747850a287612eb119, type: 3}
+  - {fileID: 21300000, guid: ec330a3c7bdcb34459141cb4a2b218d8, type: 3}
+  - {fileID: 21300000, guid: 85ae6c36db2f1c84cb1affeaba1f7fe9, type: 3}
+  - {fileID: 21300000, guid: ebe75f76635565f44ba89667204bdd1d, type: 3}
+  - {fileID: 21300000, guid: 08025ef1713f3c24fa0ad8e512833e32, type: 3}
+  - {fileID: 21300000, guid: e71d4c64e9a650142b7f19f2a967cb3c, type: 3}
+  - {fileID: 21300000, guid: 445f10dbcb561f147af7b85cf47a443a, type: 3}
+  imgUnlock:
+  - {fileID: 21300000, guid: 358c699461f8e8543b42f6e27f5111cb, type: 3}
+  - {fileID: 21300000, guid: 6e26d9e1f7f46cb488ca3d461b7f77e3, type: 3}
+  - {fileID: 21300000, guid: c73a77eb3693be6479008cd2925cc202, type: 3}
+  - {fileID: 21300000, guid: bd344cae46b118e4d89e4e81ef9a6007, type: 3}
+  - {fileID: 21300000, guid: 322fc57b29af54248bd01bd9d49e6a1f, type: 3}
+  - {fileID: 21300000, guid: dfd8634685a458b40be020a42e22ec6c, type: 3}
+  - {fileID: 21300000, guid: be6976a12a5991a43a4c7853dba8350a, type: 3}
+  - {fileID: 21300000, guid: 6db8accde5ab67340a0cda768192569d, type: 3}
+  - {fileID: 21300000, guid: 50c9a89a02792454ebae68e9e3f96c04, type: 3}
+  - {fileID: 21300000, guid: bc2f8d42a0f59f04abeb88f169de4c6d, type: 3}
+  - {fileID: 21300000, guid: db021b9e8acccb543ada39ee3ebd259f, type: 3}
+  textCost:
+  - {fileID: 2111217576}
+  - {fileID: 1748005443}
+  - {fileID: 1234434594}
+  - {fileID: 985871435}
+  - {fileID: 1758451131}
+  - {fileID: 584723257}
+  - {fileID: 1372130201}
+  - {fileID: 36830968}
+  - {fileID: 1574810848}
+  - {fileID: 1146218753}
+  - {fileID: 198833644}
+  indexCurrent: 0
+  circleBall: {fileID: 740165327}
+  ball: {fileID: 1132270678}
+  ballGoalie: {fileID: 1055432334}
 --- !u!1 &909158751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,6 +4963,7 @@ GameObject:
   - component: {fileID: 928311606}
   - component: {fileID: 928311608}
   - component: {fileID: 928311609}
+  - component: {fileID: 928311610}
   m_Layer: 0
   m_Name: goalie
   m_TagString: Untagged
@@ -4861,6 +5105,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 214.5, y: 291.7}
   m_EdgeRadius: 0
+--- !u!114 &928311610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928311605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980ce73a1fbfd3e43a81d09ab48427a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 928311608}
+  shadow: {fileID: 499208311}
+  ball: {fileID: 1132270678}
+  pointNewShadow: {fileID: 594668247}
+  isCollision: 0
+  goal: {fileID: 1905930099}
+  level: {fileID: 1656427786}
+  goalObject: {fileID: 1055432334}
+  ground:
+    serializedVersion: 2
+    m_Bits: 0
+  radius: 0
+  isJump: 0
+  pointBegin: {fileID: 1801365446}
+  shadowGoalie: {fileID: 1041704981}
+  soundMG: {fileID: 0}
 --- !u!1 &948605254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5566,18 +5838,19 @@ MonoBehaviour:
   factor: 30
   stepRoation: 10
   vt: {x: 0, y: 0}
-  shadow: {fileID: 0}
-  pointShadow: {fileID: 0}
-  pointStart: {fileID: 0}
-  score: {fileID: 0}
-  scoreImg: []
+  shadow: {fileID: 499208311}
+  pointShadow: {fileID: 315387113}
+  pointStart: {fileID: 24051164}
+  score: {fileID: 1720161698}
+  scoreImg:
+  - {fileID: 863790784}
   indexShowImg: 0
-  level: {fileID: 0}
-  goalie: {fileID: 0}
-  btMg: {fileID: 0}
-  btMg2: {fileID: 0}
-  soundMg: {fileID: 0}
-  ballMg: {fileID: 0}
+  level: {fileID: 1656427786}
+  goalie: {fileID: 928311610}
+  btMg: {fileID: 1736624283}
+  btMg2: {fileID: 376757297}
+  soundMg: {fileID: 1135965619}
+  ballMg: {fileID: 902652770}
 --- !u!1 &1135965617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,6 +5860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1135965618}
+  - component: {fileID: 1135965619}
   m_Layer: 5
   m_Name: Sound Manage
   m_TagString: Untagged
@@ -5619,6 +5893,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1135965619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135965617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b11de28038cb24ea94a36c17d4259f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioS:
+  - {fileID: 453744648}
+  - {fileID: 2009240946}
+  - {fileID: 818870312}
+  - {fileID: 1922009935}
+  - {fileID: 1721052239}
+  - {fileID: 2032416219}
+  isSound: 0
+  isMelody: 0
+  img:
+  - {fileID: 21300000, guid: 0cec916048b344c4e93e4221fb644626, type: 3}
+  - {fileID: 21300000, guid: ca210f5f706ff1248965758733547ffb, type: 3}
+  - {fileID: 21300000, guid: b928f504a99196445a47b4cc3859996f, type: 3}
+  - {fileID: 21300000, guid: 531b34192db18d54eb295139df8aa983, type: 3}
+  btSound: {fileID: 525004276}
+  btMelody: {fileID: 2124899101}
 --- !u!1 &1144441946
 GameObject:
   m_ObjectHideFlags: 0
@@ -5631,6 +5933,7 @@ GameObject:
   - component: {fileID: 1144441949}
   - component: {fileID: 1144441948}
   - component: {fileID: 1144441951}
+  - component: {fileID: 1144441952}
   m_Layer: 5
   m_Name: Ball9
   m_TagString: Untagged
@@ -5713,8 +6016,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -5725,6 +6028,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1144441952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144441946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146218753
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,6 +6331,7 @@ GameObject:
   - component: {fileID: 1158376358}
   - component: {fileID: 1158376357}
   - component: {fileID: 1158376360}
+  - component: {fileID: 1158376361}
   m_Layer: 5
   m_Name: Ball8
   m_TagString: Untagged
@@ -6098,8 +6414,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -6110,6 +6426,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1158376361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158376355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1186243057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6343,6 +6671,7 @@ GameObject:
   - component: {fileID: 1234502261}
   - component: {fileID: 1234502260}
   - component: {fileID: 1234502263}
+  - component: {fileID: 1234502264}
   m_Layer: 5
   m_Name: Ball7
   m_TagString: Untagged
@@ -6425,8 +6754,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -6437,6 +6766,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1234502264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234502258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236853805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,6 +7361,7 @@ GameObject:
   - component: {fileID: 1315557970}
   - component: {fileID: 1315557969}
   - component: {fileID: 1315557972}
+  - component: {fileID: 1315557973}
   m_Layer: 5
   m_Name: Ball6
   m_TagString: Untagged
@@ -7102,8 +7444,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -7114,6 +7456,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1315557973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315557967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319973850
 GameObject:
   m_ObjectHideFlags: 0
@@ -7697,6 +8051,7 @@ GameObject:
   - component: {fileID: 1535275451}
   - component: {fileID: 1535275450}
   - component: {fileID: 1535275453}
+  - component: {fileID: 1535275454}
   m_Layer: 0
   m_Name: star Move
   m_TagString: StarMove
@@ -7806,6 +8161,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 41.28
+--- !u!114 &1535275454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535275449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f3c3a33623867499a159ce8f15558e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPoint: {fileID: 691615674}
+  speed: 20
 --- !u!1 &1571907627
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,6 +8540,7 @@ GameObject:
   - component: {fileID: 1612597909}
   - component: {fileID: 1612597908}
   - component: {fileID: 1612597911}
+  - component: {fileID: 1612597912}
   m_Layer: 5
   m_Name: Ball4
   m_TagString: Untagged
@@ -8253,8 +8623,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -8265,6 +8635,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1612597912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612597906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1624119510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8506,6 +8888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656427785}
+  - component: {fileID: 1656427786}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -8533,6 +8916,40 @@ Transform:
   - {fileID: 1186243058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656427786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656427783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288368285c6ec53458158407294fcaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLevel: 4
+  point:
+  - {fileID: 132133795}
+  - {fileID: 1315404487}
+  - {fileID: 1997967561}
+  ball: {fileID: 1132270678}
+  isRun: 1
+  pointMove:
+  - {fileID: 2077642411}
+  - {fileID: 1434655057}
+  pointIndex: 0
+  speed: 2
+  goalie: {fileID: 928311610}
+  GOALIER: {fileID: 1857922597}
+  stars:
+  - {fileID: 1687916103}
+  - {fileID: 312691132}
+  - {fileID: 830425266}
+  defende: {fileID: 1886994268}
+  pointDefende:
+  - {fileID: 1843553143}
+  - {fileID: 1186243058}
 --- !u!1 &1687916097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8545,6 +8962,7 @@ GameObject:
   - component: {fileID: 1687916100}
   - component: {fileID: 1687916099}
   - component: {fileID: 1687916102}
+  - component: {fileID: 1687916103}
   m_Layer: 0
   m_Name: star 1
   m_TagString: Untagged
@@ -8676,6 +9094,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1687916103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687916097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bf84dbb969dad458e95ee2b7e4b40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShow: 0
+  score: {fileID: 1720161698}
+  scoreImg: {fileID: 395244308}
+  isCollision: 0
+  startMove: {fileID: 1535275449}
+  soundMG: {fileID: 0}
 --- !u!1 &1720161694
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,6 +9123,7 @@ GameObject:
   - component: {fileID: 1720161697}
   - component: {fileID: 1720161696}
   - component: {fileID: 1720161695}
+  - component: {fileID: 1720161698}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -8756,6 +9193,27 @@ RectTransform:
   m_AnchoredPosition: {x: 5, y: -126}
   m_SizeDelta: {x: 757.6, y: 346.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1720161698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720161694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9c95259a01e8742b97a83b9965c69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  highScore: 0
+  textScore: {fileID: 1720161695}
+  textScoreFinal: {fileID: 675713973}
+  textHighScore: {fileID: 32978506}
+  level: {fileID: 1656427786}
+  bestScore: {fileID: 1393836477}
+  textHighScoreShop: {fileID: 224704978}
+  rand: 0
 --- !u!1 &1721052237
 GameObject:
   m_ObjectHideFlags: 0
@@ -8900,6 +9358,7 @@ GameObject:
   - component: {fileID: 1729298801}
   - component: {fileID: 1729298800}
   - component: {fileID: 1729298804}
+  - component: {fileID: 1729298805}
   m_Layer: 5
   m_Name: Ball0
   m_TagString: Untagged
@@ -8982,8 +9441,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -8994,6 +9453,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1729298805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729298799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736624281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9003,6 +9474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736624282}
+  - component: {fileID: 1736624283}
   m_Layer: 5
   m_Name: Button Manage 2
   m_TagString: Untagged
@@ -9032,6 +9504,33 @@ RectTransform:
   m_AnchoredPosition: {x: 37, y: -611}
   m_SizeDelta: {x: 100, y: -42}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1736624283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736624281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357163da75cb6af4c8a6a2d6586576a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 1
+  buttons:
+  - {fileID: 1236853807}
+  - {fileID: 724566103}
+  - {fileID: 1149334678}
+  points:
+  - {fileID: 172371512}
+  - {fileID: 897092226}
+  isShow: 1
+  speed: 5
+  shop: {fileID: 902652770}
+  ball: {fileID: 1132270672}
+  STATE: 0
+  quitGame: {fileID: 415352756}
+  ballMg: {fileID: 902652770}
 --- !u!1 &1745343775
 GameObject:
   m_ObjectHideFlags: 0
@@ -9397,6 +9896,7 @@ GameObject:
   - component: {fileID: 1814648100}
   - component: {fileID: 1814648099}
   - component: {fileID: 1814648102}
+  - component: {fileID: 1814648103}
   m_Layer: 5
   m_Name: Ball1
   m_TagString: Untagged
@@ -9479,8 +9979,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -9491,6 +9991,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1814648103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814648097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1816064355
 GameObject:
   m_ObjectHideFlags: 0
@@ -9851,6 +10363,7 @@ GameObject:
   - component: {fileID: 1886994263}
   - component: {fileID: 1886994267}
   - component: {fileID: 1886994266}
+  - component: {fileID: 1886994268}
   m_Layer: 0
   m_Name: defende
   m_TagString: Untagged
@@ -10076,6 +10589,24 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1886994268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886994260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2b27f25da2cbf41b0766717c1b197f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFail: 0
+  ball: {fileID: 1132270678}
+  ground: {fileID: 1761686405}
+  shadow: {fileID: 499208311}
+  yBall: 0
+  soundMG: {fileID: 0}
 --- !u!1 &1905930092
 GameObject:
   m_ObjectHideFlags: 0
@@ -10089,6 +10620,7 @@ GameObject:
   - component: {fileID: 1905930095}
   - component: {fileID: 1905930098}
   - component: {fileID: 1905930097}
+  - component: {fileID: 1905930099}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Goal
@@ -10296,6 +10828,28 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1905930099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905930092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdf21572a43ce94e9f551e75228de3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGoal: 0
+  columnGround: {fileID: 909158751}
+  ball: {fileID: 1132270678}
+  shadow: {fileID: 499208311}
+  pointNewShadow: {fileID: 2101541731}
+  minCollision: 84.85
+  maxCollision: 94.17
+  goalie: {fileID: 928311610}
+  wall: {fileID: 1624119510}
+  soundMG: {fileID: 1135965619}
 --- !u!1 &1922009933
 GameObject:
   m_ObjectHideFlags: 0
@@ -10440,6 +10994,7 @@ GameObject:
   - component: {fileID: 1980235438}
   - component: {fileID: 1980235437}
   - component: {fileID: 1980235440}
+  - component: {fileID: 1980235441}
   m_Layer: 5
   m_Name: Ball5
   m_TagString: Untagged
@@ -10522,8 +11077,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -10534,6 +11089,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1980235441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980235435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997967560
 GameObject:
   m_ObjectHideFlags: 0
@@ -11096,6 +11663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2095972337}
   - component: {fileID: 2095972336}
+  - component: {fileID: 2095972338}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -11163,6 +11731,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2095972338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095972334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8efd4881560dc42b78b803e2709f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1132270678}
+  buttonMg1: {fileID: 376757297}
+  buttonMg2: {fileID: 1736624283}
+  score: {fileID: 1720161698}
 --- !u!1 &2101541730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11418,6 +12002,7 @@ GameObject:
   - component: {fileID: 2129774831}
   - component: {fileID: 2129774830}
   - component: {fileID: 2129774833}
+  - component: {fileID: 2129774834}
   m_Layer: 5
   m_Name: Ball10
   m_TagString: Untagged
@@ -11500,8 +12085,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
+        - m_Target: {fileID: 902652770}
+          m_TargetAssemblyTypeName: BallManage, Assembly-CSharp
           m_MethodName: unLockBall
           m_Mode: 3
           m_Arguments:
@@ -11512,6 +12097,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &2129774834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129774828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afe846db497b344f9c8882899bc3a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132998943
 GameObject:
   m_ObjectHideFlags: 0

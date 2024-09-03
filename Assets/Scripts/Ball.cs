@@ -37,6 +37,8 @@ public class Ball : MonoBehaviour
 	{
 		//		hit = new RaycastHit2D ();
 		stepScale = (maxScale - minScale) / countStep;
+		Debug.Log(score.score);
+
 		level.setLevel(score.score);
 		shadow.transform.position = pointShadow.position;
 		ballMg.setImgBall();
@@ -85,7 +87,6 @@ public class Ball : MonoBehaviour
 				}
 			}
 		}
-
 	}
 	public void hideButton()
 	{
@@ -141,7 +142,7 @@ public class Ball : MonoBehaviour
 	{
 		gameObject.SetActive(true);
 		level.setLevel(score.score);
-		//transform.position = pointStart.position;
+		transform.position = pointStart.position;
 
 		isShoot = false;
 		isPlay = false;
@@ -182,7 +183,6 @@ public class Ball : MonoBehaviour
 		{
 			showButon();
 		}
-
 	}
 	public IEnumerator showImg()
 	{

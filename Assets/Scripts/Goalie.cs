@@ -40,8 +40,10 @@ public class Goalie : MonoBehaviour
 	}
 	void OnCollisionEnter2D(Collision2D other)
 	{
+		Debug.Log("A");
 		if (!goal.isGoal)
 		{
+			Debug.Log("B");
 			if (other.collider.tag == "Ball")
 			{
 				isCollision = true;
@@ -54,6 +56,8 @@ public class Goalie : MonoBehaviour
 				level.isRun = false;
 				ball.addScoreBall(0);
 				soundMG.playSound(5);
+
+				Debug.Log("C");
 
 				StartCoroutine("resetGame");
 			}
