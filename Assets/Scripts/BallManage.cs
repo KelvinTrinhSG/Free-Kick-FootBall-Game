@@ -63,6 +63,7 @@ public class BallManage : MonoBehaviour
 			}
 			else
 			{
+				ClaimNFT(index);
 				indexCurrent = index;
 				updateShop();
 				PlayerPrefs.SetInt("IndexBall", index);
@@ -86,18 +87,26 @@ public class BallManage : MonoBehaviour
 				updateShop();
 				PlayerPrefs.SetInt("IndexBall", index);
 			}
-
 		}
 		else
 		{
-			if (score.highScore >= costBall[index])
+			if (PlayerPrefs.GetInt("" + index) == 0)
 			{
+				if (score.highScore >= costBall[index])
+				{
+					ClaimNFT(index);
+					PlayerPrefs.SetInt("" + index, 1);
+					indexCurrent = index;
+					updateShop();
+					PlayerPrefs.SetInt("IndexBall", index);
+				}
+			}
+			else {
 				ClaimNFT(index);
 				indexCurrent = index;
 				updateShop();
 				PlayerPrefs.SetInt("IndexBall", index);
 			}
-
 		}
 	}
 	public void updateShop()
@@ -124,7 +133,7 @@ public class BallManage : MonoBehaviour
 			else
 			{
 				Debug.Log("x" + index);
-				if (score.highScore >= costBall[index])
+				if ( (score.highScore >= costBall[index]) || PlayerPrefs.GetInt("" + index) > 0 )
 				{
 					ch.GetComponent<Image>().sprite = imgUnlock[index];
 					textCost[index].SetActive(false);

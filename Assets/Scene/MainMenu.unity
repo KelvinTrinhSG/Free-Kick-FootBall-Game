@@ -592,10 +592,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
       propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
       propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
@@ -603,7 +607,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2007112738}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 2007112738}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
       propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
@@ -611,11 +623,23 @@ PrefabInstance:
       value: Login
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
+      value: CheckNFT
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
       propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
       value: BlockchainManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
+      value: BlockchainManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
       propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458216348175956803, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
+      propertyPath: onConnected.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7751525179127478473, guid: 897cda79fe3077c4fbc0fb5916d433ee, type: 3}
