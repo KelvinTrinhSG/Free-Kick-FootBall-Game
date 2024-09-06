@@ -79,7 +79,7 @@ public class Ball : MonoBehaviour
 					isShoot = false;
 				}
 				STATUS = 1;//trang thai 0
-				if (btMg.isShow = true)
+				if (btMg.isShow == true)
 				{
 					hideButton();
 					score.GetComponent<Text>().color = new Vector4(1f, 1f, 1f, 1f);
