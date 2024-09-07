@@ -38,6 +38,13 @@ public class StarManage : MonoBehaviour
 			PlayerPrefs.SetInt("Star", scoreStar);
 		}
 	}
+
+	public void ResetScoreStar() {
+		scoreStar = 0;
+		textStar.text = "x" + 0;
+		textScoreStar.text = "x" + 0;
+		PlayerPrefs.SetInt("Star", 0);
+	}
 	public IEnumerator rotationStar()
 	{
 		float count = 0f;
